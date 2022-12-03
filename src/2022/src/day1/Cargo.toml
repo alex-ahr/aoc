@@ -1,0 +1,12 @@
+[package]
+name = "day1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mimalloc = { version = "0.1.17", default-features = false }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
